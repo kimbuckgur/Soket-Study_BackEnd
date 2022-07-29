@@ -10,8 +10,9 @@ const io = socketIo(sever);
 const PORT = process.env.PORT || 5000;
 
 io.on("connection", (socket) => {
-  console.log("연결성공");
-  socket.on("list")
+  socket.on("list", () => {
+    console.log("dsd");
+  });
 });
 
 sever.listen(PORT, () => {
