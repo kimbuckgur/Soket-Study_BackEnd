@@ -9,8 +9,9 @@ const io = socketIo(sever);
 
 const PORT = process.env.PORT || 5000;
 
-io.on("connection", (sokcet) => {
+io.on("connection", (socket) => {
   console.log("연결성공");
+  socket.on("list")
 });
 
 sever.listen(PORT, () => {
